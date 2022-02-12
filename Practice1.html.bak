@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+
+				<head>
+					<meta charset = "UTF-8">
+					<title>This is for class practice</title>
+					
+					<!--The align-content property aligns a flex container’s lines within the flex container
+						when there is extra space in the cross-axis, similar to how justify-content aligns individual
+						items within the main-axis. Note, this property has no effect on a single-line flex container.
+						
+						Values have the following meanings:
+						flex-start: Lines are packed toward the start of the flex container. The cross-start edge of
+						the first line in the flex container is placed flush with the cross-start edge of the flex
+						container, and each subsequent line is placed flush with the preceding line.
+						
+						flex-end: Lines are packed toward the end of the flex container. The cross-end edge of the
+						last line is placed flush with the cross-end edge of the flex container, and each preceding
+						line is placed flush with the subsequent line.
+					-->
+					<!--display inline-block for align the boxex same line-->
+					
+					<style>
+					
+						.flex-container {
+							margin: auto;
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: center;
+							justify-content: space-around;
+							justify-content: stretch;
+							align-items: stretch;
+						}
+
+						.child-items {
+							margin: 6px;
+							padding:8px;
+							width: 47%;
+							border:3px solid white;
+							font-family: Arial;
+							font-size: 19px;
+						}
+						
+						.child-items1 {
+							margin: 6px;
+							padding:8px;
+							width: 47%;
+							border:3px solid white;
+							font-family: Arial;
+							font-size: 19px;
+						}
+											
+						/*Accesing body tag*/
+						body{
+							background-color:#1c1e21;
+							<!--color:white;
+							font-size:22px;-->
+							font-family:Arial;
+							text-align:justify;
+						}
+						
+						<!-- I can use this CSS also to center a table. But to use this i need to
+						use <table class = "center"> in table tag.
+						table.center {
+							margin-left: auto; 
+							margin-right: auto;
+						}
+						-->
+						
+						table{
+							overflow-x:scroll;
+							display:block;
+							<!--margin-left: auto and margin-right: auto is for centering the table-->
+							margin-left: auto;
+							margin-right: auto;
+							background-color:#09001c;
+							font-family:Century Gothic;
+							font-size:18px;
+							color: white;
+							text-align:center;
+							width:100%;
+							height:290px;
+							border:3px solid Cyan;
+							/*this is used for cell spacing*/
+							border-spacing:3px;
+						}
+						
+						caption{
+							font-family: Bookman Old Style;
+							font-size: 40px;
+							font-style: Bold;
+						}
+		
+						td,th{
+							border:2px solid cyan;
+							/*this is used for cell pading*/
+							padding:4px;
+							word-wrap:break-word;
+						}
+				
+						thead{
+							font-family:Century Schoolbook;
+							font-size:22px;
+							font-style:Bold;
+							color:Cyan;
+						}
+						
+						fieldset{
+							background-color: #48286b;
+							border:5px solid cyan;
+							width:600px;
+							margin:0px auto;
+						}
+	
+						label{
+							cursor: pointer;
+							display: inline-block;
+							padding: 2px 5px;
+							text-align: left;
+							width: 150px;
+							vertical-align: top;
+							color:white;
+							font-family:Arial;
+							font-size:19px;
+							font-style: bold;
+						}
+
+						input{
+							font-family:Tahoma;
+							font-size: 20px;
+							border:2px solid cyan;
+							height:30px;
+							width:305px;
+							background-color:#1c1e21;
+							border-radius: 15px;
+							text-align:center;
+							color:white;
+						}
+						
+					</style>
+					
+				</head>
+				
+				<body>
+					<!--<h1 style = "text-align:center" >STUDENT DETAILS OF CSE</h1> <!--<hr style = "color:white; height:2px; border-width:4">-->
+					<img style="width: 100%;height: 300px;" src="cse.jpg">
+					
+					<table>
+					
+						<!--for caption of the table-->
+						<caption>Programming Languages</caption>
+					
+						<!--for table head-->
+						<thead>
+						
+							<!--Table Row-->
+							<tr>
+					
+								<!--Use <th> tag for table header-->
+								<th style = "width:10%">Serial</th>
+								<th style = "width:15%">Language</th>
+								<th style = "width:20%">Creator</th>
+								<th style = "width:20%">Invented in</th>
+								<th style = "width:70%">Used For</th>
+						
+							</tr>
+							
+						</thead>
+						
+						<!--for table body-->
+						<tbody>
+						
+							<tr>
+								<!--for table data-->
+								<td>1</td>
+								<td>JAVA</td>
+								<td>James Gosling</td>
+								<td>May 23, 1995; 26 years ago</td>
+								<td>Android apps, Games, Desktop Apps, Web Applications, Big Data.</td>
+							</tr>
+					
+							<tr>
+								<!--for table data-->
+								<td>2</td>
+								<td>PYTHON</td>
+								<td>Guido van Rossum</td>
+								<td>In February 1991</td>
+								<td>Web Apps, Games, Machine Learning, Data Visualization, Data Science.</td>
+							</tr>
+					
+							<tr>
+								<!--for table data-->
+								<td>3</td>
+								<td>JAVASCRIPT</td>
+								<td>Brendan Eich</td>
+								<td>1995</td>
+								<td>Web Development & Apps, Server Application, Web Servers, Mobile Applications.</td>
+							</tr>
+							
+							<tr>
+								<!--for table data-->
+								<td>4</td>
+								<td>C++</td>
+								<td>Bjarne Stroustrup</td>
+								<td>1985; 37 years ago</td>
+								<td>Games, Operating System, Database, Embedded System.</td>
+							</tr>
+						
+						</tbody>
+					
+					</table>
+					</br>
+					
+					<!--use class = "flex-container" for whole div class-->
+					<div class="flex-container">
+					
+						<!--use class = "child-items" for child classes of parent flex-container class-->
+						<div class="child-items" id="content" style="background-color:Cyan; color:Black;">
+							<p>
+								<h1>JAVA </h1>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without
+								the need to recompile. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but has fewer low-level facilities than either of them. The Java runtime provides dynamic capabilities (such as reflection and runtime
+								code modification) that are typically not available in traditional compiled languages. As of 2019, Java was one of the most popular programming languages in use according to GitHub, particularly for client–server web applications, with a reported 9 million developers.
+							</p>
+						</div>
+					
+						<!--use class = "child-items" for child classes of parent flex-container class-->
+						<div class="child-items" id="content" style="background-color:red; color:White;">
+							<p>
+								<h1>PYTHON </h1>Python is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
+									Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.
+							</p>
+						</div>
+						
+						<!--use class = "child-items" for child classes of parent flex-container class-->
+						<div class="child-items1" id="content1" style="background-color:Cyan; color:Black;">
+							<p>
+								<h1>C++ </h1>C++ (/ˌsiːˌplʌsˈplʌs/) is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or "C with Classes". The language has expanded significantly over time, and modern C++ now has object-oriented, generic, and functional features in addition to facilities for low-level memory manipulation.
+								It is almost always implemented as a compiled language, and many vendors provide C++ compilers, including the Free Software Foundation, LLVM, Microsoft, Intel, Oracle, and IBM, so it is available on many platforms. C++ was designed with an orientation toward systems programming and embedded, resource-constrained software and large systems, with performance, efficiency, 
+								and flexibility of use as its design highlights. C++ has also been found useful in many other contexts, with key strengths being software infrastructure and resource-constrained applications, including desktop applications, video games, servers (e.g. e-commerce, web search, or databases), and performance-critical applications (e.g. telephone switches or space probes).
+							</p>
+						</div>
+					
+						<!--use class = "child-items" for child classes of parent flex-container class-->
+						<div class="child-items1" id="content1" style="background-color:red; color:White;">
+							<p>
+								<h1>JAVASCRIPT </h1>JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+								JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). 
+							</p>
+						</div>
+						
+					</div>
+					</br> </br>
+					
+					<div>
+						
+						<fieldset>
+						
+						<div>
+							<label for="fullname">Name : </label>
+							<input type = "text" name = "fullname" id = "fullname" required>
+						</div> </br>
+						
+						<div>
+							<label for="fullname">ID : </label>
+							<input type = "text" name = "fullname" id = "fullname" required>
+						</div> </br>
+						
+						<div>
+							<label for="fullname">Section : </label>
+							<input type = "text" name = "fullname" id = "fullname" required>
+						</div> </br>
+						
+						<div>
+							<label for = "department">Department : </label>
+							<Select name = "department" style = "font-family:Tahoma; font-size:20px; border:2px solid cyan; border-radius: 15px; text-align:center; color:white; width:305px; height:33px; background-color:#1c1e21;"> 
+							<option value = "CSE" selected> CSE </option>
+							<option value = "EEE"> EEE </option>
+							<option value = "LLB"> LLB </option>
+							<option value = "ETE"> ETE </option>
+							</Select>
+						</div> </br>
+						
+						<div>
+							<label for = "department">Favourite Language : </label>
+							<Select name = "department" style = "font-family:Tahoma; font-size:20px; border:2px solid cyan; border-radius: 15px; text-align:center; color:white; width:305px; height:33px; background-color:#1c1e21;"> 
+							<option value = "CSE" selected> CSE </option>
+							<option value = "EEE"> EEE </option>
+							<option value = "LLB"> LLB </option>
+							<option value = "ETE"> ETE </option>
+							</Select>
+						</div> </br>
+						
+						</fieldset>
+						
+					</div>
+					
+				</body>
+
+</html>
